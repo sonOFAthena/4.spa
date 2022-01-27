@@ -85,15 +85,13 @@ const Navbar = () => {
               <li className="nav-btn">
                 {button ? (
                   <Link to="/signup" className="btn-link">
-                    <Button buttonStyle="btn--outline" buttonSize="btn--mobile">
-                      SIGN UP
-                    </Button>
+                    <Button buttonStyle="btn--outline">SIGN UP</Button>
                   </Link>
                 ) : (
                   <Link
                     to="/signup"
-                    onClick={handleMobileMenu}
                     className="btn-link"
+                    onClick={handleMobileMenu}
                   >
                     <Button buttonStyle="btn--outline" buttonSize="btn--mobile">
                       SIGN UP
