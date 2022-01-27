@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
+import Section from "../components/Section";
+import { series } from "../data/Data";
 
 const Series = () => {
-  return <div>Series</div>;
+  return (
+    <>
+      <Section {...series} />
+    </>
+  );
 };
 
 export default Series;
