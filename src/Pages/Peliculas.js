@@ -1,13 +1,13 @@
-import React from "react";
-import Section from "../components/Section";
-import { peliculas } from "../data/Data";
+import React from 'react'
+import Section from '../components/Section'
+import { peliculas } from '../data/Data'
 
 const Peliculas = () => {
   return (
     <>
-      <Section {...peliculas} />
+      <Section {...peliculas}/>
     </>
-  );
-};
+  )
+}
 
-export default Peliculas;
+export default Peliculas

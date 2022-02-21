@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 import { RiNetflixFill } from "react-icons/ri";
 import { FaTimes, FaBars } from "react-icons/fa";
-import "./Navbar.css";
-import { IconContext } from "react-icons/lib";
+import { IconContext } from "react-icons";
 import Button from "./Button";
 
 const Navbar = () => {
@@ -27,6 +27,7 @@ const Navbar = () => {
       }
     };
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -41,9 +42,11 @@ const Navbar = () => {
               <RiNetflixFill className="navbar-icon" />
               Netflix
             </Link>
+
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </div>
+
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={handleMobileMenu}>
@@ -52,7 +55,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link to="/tv" className="nav-links" onClick={handleMobileMenu}>
-                  TV
+                  Tv
                 </Link>
               </li>
               <li className="nav-item">
@@ -70,7 +73,7 @@ const Navbar = () => {
                   className="nav-links"
                   onClick={handleMobileMenu}
                 >
-                  Pelicula
+                  Peliculas
                 </Link>
               </li>
               <li className="nav-item">
@@ -85,13 +88,15 @@ const Navbar = () => {
               <li className="nav-btn">
                 {button ? (
                   <Link to="/signup" className="btn-link">
-                    <Button buttonStyle="btn--outline">SIGN UP</Button>
+                    <Button buttonStyle="btn--outline" buttonSize="btn--mobile">
+                      SIGN UP
+                    </Button>
                   </Link>
                 ) : (
                   <Link
                     to="/signup"
-                    className="btn-link"
                     onClick={handleMobileMenu}
+                    className="btn-link"
                   >
                     <Button buttonStyle="btn--outline" buttonSize="btn--mobile">
                       SIGN UP

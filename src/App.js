@@ -1,19 +1,22 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Home from "./Pages/Home";
-import Infantil from "./Pages/Infantil";
-import Peliculas from "./Pages/Peliculas";
-import Series from "./Pages/Series";
-import Signup from "./Pages/Signup";
-import Tv from "./Pages/Tv";
+import Home from "./pages/Home";
+import Infantil from "./pages/Infantil";
+import Peliculas from "./pages/Peliculas";
+
+
+import Series from "./pages/Series";
+import Signup from "./pages/Signup";
+import Tv from "./pages/Tv";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
+      <Router> 
+        <Navbar />  
+        <Routes> 
           <Route path="/" element={<Home />} />
           <Route path="/tv" element={<Tv />} />
           <Route path="/series" element={<Series />} />
@@ -23,7 +26,7 @@ function App() {
         </Routes>
       </Router>
     </div>
-  );
+  ); 
 }
 
 export default App;

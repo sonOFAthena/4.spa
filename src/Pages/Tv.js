@@ -1,13 +1,13 @@
-import React from "react";
-import Section from "../components/Section";
-import { tv } from "../data/Data";
+import React from 'react'
+import Section from '../components/Section'
+import { tv } from '../data/Data'
 
 const Tv = () => {
   return (
     <>
-      <Section {...tv} />
+      <Section {...tv}/>
     </>
-  );
-};
+  )
+}
 
-export default Tv;
+export default Tv

@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "./Button";
 import { Link } from "react-router-dom";
-
+import Button from "./Button";
 import "./Section.css";
+
 const Section = ({
   topLine,
   headLine,
@@ -11,15 +11,15 @@ const Section = ({
   img,
   alt,
   imgStart,
-  lighBackgroud,
-  lighHeadText,
-  lighDescriptionText,
+  lightBackground,
+  lightHeadText,
+  lightDescriptionText,
 }) => {
   return (
     <>
       <div
         className={
-          lighBackgroud ? "home__hero-section" : "home__hero-section darkBg"
+          lightBackground ? "home__hero-section" : "home__hero-section darkBg"
         }
       >
         <div className="container">
@@ -33,12 +33,12 @@ const Section = ({
             <div className="col">
               <div className="home__hero-text-wrapper">
                 <div className="top-line">{topLine}</div>
-                <h1 className={lighHeadText ? "heading" : "heading dark"}>
+                <h1 className={lightHeadText ? "heading" : "heading dark"}>
                   {headLine}
                 </h1>
                 <p
                   className={
-                    lighDescriptionText
+                    lightDescriptionText
                       ? "home__hero-subtitle"
                       : "home__hero-subtitle dark"
                   }
@@ -52,6 +52,7 @@ const Section = ({
                 </Link>
               </div>
             </div>
+
             <div className="col">
               <div className="home__hero-img-wrapper">
                 <img src={img} alt={alt} className="home__hero-img" />

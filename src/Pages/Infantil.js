@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const Infantil = () => {
-  return <div>Infantil</div>;
-};
+  return (
+    <div>Infantil</div>
+  )
+}
 
-export default Infantil;
+export default Infantil
